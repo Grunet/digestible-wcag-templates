@@ -8,6 +8,7 @@ async function getTemplateHtml(): Promise<string> {
   // );
 
   // return resBody;
+  console.log(import.meta.url);
 
   const pathToHtml = import.meta.url
     .replace("endpoints", "templates")
