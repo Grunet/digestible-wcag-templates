@@ -57,3 +57,25 @@ Deno.test("Imports template from remote repository", async () => {
   //Assert
   assertStringContains(templateHtml, "html");
 });
+
+Deno.test("Imports interface from remote repository", () => {
+  //Arrange
+  const overrideInfo: IOverrideInfo_Remote = {
+    content: {
+      "contextual-text": "dummy",
+      "email-preview-text": "dummy",
+      "header": "dummy",
+      "section-header": "dummy",
+      "main-text": "dummy",
+    },
+    links: {
+      "more-info": "dummy",
+      "techniques": "dummy",
+    },
+  };
+
+  //Act
+
+  //Assert
+  assert(true); //Proof that the declaration compiled
+});
