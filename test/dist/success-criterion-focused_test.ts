@@ -1,3 +1,6 @@
+//Run using the following command with "test" as the working directory (the "reload" is to make sure the latest version of the remote file is pulled)
+//deno test --reload --allow-read --allow-net
+
 import {
   assertStringContains,
   assert,
