@@ -1,13 +1,6 @@
 import { ISuccessCriterionFocused as IOverrideInfo } from "../interfaces/ISuccessCriterionFocused.ts";
 
 async function getTemplateHtml(): Promise<string> {
-  // const res = await fetch("./templates/success-criterion-focused.html");
-
-  // const resBody = new TextDecoder("utf-8").decode(
-  //   new Uint8Array(await res.arrayBuffer()),
-  // );
-
-  // return resBody;
   const pathToHtml = import.meta.url
     .replace("endpoints", "templates")
     .replace(".ts", ".html");
@@ -23,7 +16,7 @@ async function getTemplateHtml(): Promise<string> {
     html = await Deno.readTextFile(pathToHtml);
   } else {
     throw Error(
-      "import.meta.url doesn't seem to point to a networked resource or a local file",
+      "import.meta.url doesn't seem to be pointing to a networked resource or a local file",
     );
   }
 
