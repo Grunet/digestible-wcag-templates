@@ -5,6 +5,7 @@
   "tasks": [
     {
       "label": "clean",
+      "group": "build",
       "type": "shell",
       "options": {
         "cwd": "${cwd}/scripts/"
@@ -13,14 +14,17 @@
     },
     {
       "label": "copy",
+      "group": "build",
       "type": "shell",
       "options": {
         "cwd": "${cwd}/scripts/"
       },
+      // Have to use the "--unstable" flag for this to work. See https://github.com/denoland/deno/issues/5175
       "command": "deno run --unstable --allow-read=.,../src/,../dist/ --allow-write=../dist/ ./copy.ts"
     },
     {
       "label": "extractInterfaces",
+      "group": "build",
       "type": "shell",
       "options": {
         "cwd": "${cwd}/scripts/"
@@ -29,6 +33,7 @@
     },
     {
       "label": "createEndpoints",
+      "group": "build",
       "type": "shell",
       "options": {
         "cwd": "${cwd}/scripts/"
@@ -36,13 +41,24 @@
       "command": "deno run --allow-read=.,../dist/ --allow-write=../dist/ ./createEndpoints.ts"
     },
     {
-      "label": "runAll",
+      "label": "Run all scripts",
+      "group": "build",
       "type": "shell",
       "options": {
         "cwd": "${cwd}/scripts/"
       },
       "dependsOn": ["clean", "copy", "extractInterfaces", "createEndpoints"],
       "dependsOrder": "sequence"
+    },
+    {
+      "label": "Run all tests",
+      "group": "test",
+      "type": "shell",
+      "options": {
+        "cwd": "${cwd}/test/"
+      },
+      //The "--reload" is to make sure the latest version of the imported remote file is pulled
+      "command": "deno test --reload --allow-read --allow-net"
     }
   ]
 }
