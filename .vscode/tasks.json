@@ -1,0 +1,48 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "clean",
+      "type": "shell",
+      "options": {
+        "cwd": "${cwd}/scripts/"
+      },
+      "command": "deno run --allow-read=.,../dist/ --allow-write=../dist/ ./clean.ts"
+    },
+    {
+      "label": "copy",
+      "type": "shell",
+      "options": {
+        "cwd": "${cwd}/scripts/"
+      },
+      "command": "deno run --unstable --allow-read=.,../src/,../dist/ --allow-write=../dist/ ./copy.ts"
+    },
+    {
+      "label": "extractInterfaces",
+      "type": "shell",
+      "options": {
+        "cwd": "${cwd}/scripts/"
+      },
+      "command": "deno run --allow-read=.,../dist/ --allow-write=../dist/ ./extractInterfaces.ts"
+    },
+    {
+      "label": "createEndpoints",
+      "type": "shell",
+      "options": {
+        "cwd": "${cwd}/scripts/"
+      },
+      "command": "deno run --allow-read=.,../dist/ --allow-write=../dist/ ./createEndpoints.ts"
+    },
+    {
+      "label": "runAll",
+      "type": "shell",
+      "options": {
+        "cwd": "${cwd}/scripts/"
+      },
+      "dependsOn": ["clean", "copy", "extractInterfaces", "createEndpoints"],
+      "dependsOrder": "sequence"
+    }
+  ]
+}

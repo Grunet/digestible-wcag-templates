@@ -1,6 +1,3 @@
-//Run using the following command
-//deno run --allow-read=.,../dist/ --allow-write=../dist/ <relative path to file>
-
 try {
   await Deno.mkdir("../dist/interfaces/");
 } catch (e) {
