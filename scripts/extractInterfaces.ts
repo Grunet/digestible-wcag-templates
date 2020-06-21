@@ -1,3 +1,5 @@
+import { generateInterfaceName } from "./sharedUtils/calculateFilenames.ts";
+
 try {
   await Deno.mkdir("../dist/interfaces/");
 } catch (e) {
@@ -10,9 +12,7 @@ for await (const dirEntry of Deno.readDir("../dist/templates/")) {
   const html: string = decoder.decode(data);
 
   const fileName = dirEntry.name.split(".")[0];
-  const nameForInterface = fileName.split("-").map((word) =>
-    `${word[0].toUpperCase()}${word.substring(1)}`
-  ).join(""); //TS doesn't like hyphens in the interface declaration
+  const nameForInterface = generateInterfaceName(fileName);
 
   await __extractInterfaceFromTemplate(nameForInterface, html);
 }
