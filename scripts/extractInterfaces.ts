@@ -38,7 +38,8 @@ async function __extractInterfaceFromTemplate(
     fileContent,
   );
 
-  //TODO - figure out how to use Deno.run to run "deno fmt" on this new file (will require full --allow-read permission until https://github.com/denoland/deno/issues/2128 is addressed)
+  //TODO - figure out how to use Deno.run to run "deno fmt" on this new file (will require full --allow-run permission until https://github.com/denoland/deno/issues/2128 is addressed)
+  //Deno.run({ cmd: ["deno", "fmt"], cwd: "../dist/interfaces/" });
 }
 
 function __extractPlaceholderIdentifiers(
