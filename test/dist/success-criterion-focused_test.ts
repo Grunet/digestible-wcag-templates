@@ -64,6 +64,7 @@ Deno.test("Imports interface from remote repository", () => {
       "email-preview-text": "dummy",
       "header": "dummy",
       "section-header": "dummy",
+      "section-header-subheading": "dummy",
       "main-text": "dummy",
     },
     links: {
