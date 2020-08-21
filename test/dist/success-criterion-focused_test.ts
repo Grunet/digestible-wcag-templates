@@ -1,7 +1,7 @@
 import {
   assertStringContains,
   assert,
-} from "https://deno.land/std/testing/asserts.ts";
+} from "https://deno.land/std@0.60.0/testing/asserts.ts";
 
 import {
   getTemplateHtml as getTemplateHtml_Local,
@@ -16,6 +16,7 @@ Deno.test("Imports interface from local dist folder", () => {
       "email-preview-text": "dummy",
       "header": "dummy",
       "section-header": "dummy",
+      "section-header-subheading": "dummy",
       "main-text": "dummy",
     },
     links: {
