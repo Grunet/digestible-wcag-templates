@@ -5,7 +5,7 @@ interface ISuccessCriterionFocused
         "header": string,
         "section-header": string,
         "section-header-subheading": string,
-        "main-text": string,
+        "main-content": string,
         "contextual-text": string
     },
     "links": {
