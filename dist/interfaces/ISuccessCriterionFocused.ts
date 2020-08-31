@@ -6,7 +6,8 @@ interface ISuccessCriterionFocused
         "section-header": string,
         "section-header-subheading": string,
         "main-content": string,
-        "contextual-text": string
+        "contextual-text": string,
+        "example": string
     },
     "links": {
         "more-info": string,
