@@ -22,7 +22,6 @@ Deno.test("Imports interface from local dist folder", () => {
     },
     links: {
       "more-info": "dummy",
-      "techniques": "dummy",
     },
   };
 
@@ -71,7 +70,6 @@ Deno.test("Imports interface from remote repository", () => {
     },
     links: {
       "more-info": "dummy",
-      "techniques": "dummy",
     },
   };
 
