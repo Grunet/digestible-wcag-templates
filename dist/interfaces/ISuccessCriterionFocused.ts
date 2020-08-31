@@ -10,8 +10,7 @@ interface ISuccessCriterionFocused
         "example-content": string
     },
     "links": {
-        "more-info": string,
-        "techniques": string
+        "more-info": string
     }
 }
  export {ISuccessCriterionFocused}
