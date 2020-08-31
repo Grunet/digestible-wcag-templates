@@ -18,6 +18,7 @@ Deno.test("Imports interface from local dist folder", () => {
       "section-header": "dummy",
       "section-header-subheading": "dummy",
       "main-content": "dummy",
+      "example-content": "dummy",
     },
     links: {
       "more-info": "dummy",
@@ -66,6 +67,7 @@ Deno.test("Imports interface from remote repository", () => {
       "section-header": "dummy",
       "section-header-subheading": "dummy",
       "main-content": "dummy",
+      "example-content": "dummy",
     },
     links: {
       "more-info": "dummy",
