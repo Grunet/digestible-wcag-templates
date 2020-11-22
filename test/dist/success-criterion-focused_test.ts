@@ -22,6 +22,7 @@ Deno.test("Imports interface from local dist folder", () => {
     },
     links: {
       "more-info": "dummy",
+      "unsubscribe": "dummy"
     },
   };
 

@@ -13,7 +13,7 @@ async function getTemplateHtml(): Promise<string> {
       new Uint8Array(await res.arrayBuffer()),
     );
   } else if (import.meta.url.startsWith("file")) {
-    html = await Deno.readTextFile(pathToHtml);
+    html = await Deno.readTextFile(new URL(pathToHtml));
   } else {
     throw Error(
       "import.meta.url doesn't seem to be pointing to a networked resource or a local file",
