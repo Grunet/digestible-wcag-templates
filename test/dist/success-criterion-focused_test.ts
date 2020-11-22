@@ -71,6 +71,7 @@ Deno.test("Imports interface from remote repository", () => {
     },
     links: {
       "more-info": "dummy",
+      "unsubscribe": "dummy"
     },
   };
 
