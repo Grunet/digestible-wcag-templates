@@ -11,6 +11,7 @@ interface ISuccessCriterionFocused
     },
     "links": {
         "more-info": string,
+        "contact-us": string,
         "unsubscribe": string
     }
 }
