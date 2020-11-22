@@ -93,7 +93,7 @@ function __generateInterfaceText(
     .replace(/"string"/g, "string");
 
   const fileContent =
-    `interface I${interfaceName} \n${interfaceContent}\n export {I${interfaceName}}`;
+    `interface I${interfaceName} \n${interfaceContent}\n export type {I${interfaceName}}`;
 
   return fileContent;
 }

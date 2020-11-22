@@ -14,4 +14,4 @@ interface ISuccessCriterionFocused
         "unsubscribe": string
     }
 }
- export {ISuccessCriterionFocused}
+ export type {ISuccessCriterionFocused}

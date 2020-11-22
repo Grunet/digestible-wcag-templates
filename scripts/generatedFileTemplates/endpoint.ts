@@ -23,4 +23,5 @@ async function getTemplateHtml(): Promise<string> {
   return html;
 }
 
-export { getTemplateHtml, IOverrideInfo };
+export { getTemplateHtml }
+export type { IOverrideInfo }
