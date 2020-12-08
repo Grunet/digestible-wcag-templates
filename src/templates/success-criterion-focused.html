@@ -178,6 +178,12 @@
 
 	    }
 
+        /* Improving visibility when interacting with the links*/
+        a:focus {
+            outline-style: dashed;
+            outline-width: initial;
+            outline-color: currentcolor;
+        }
     </style>
     <!-- Progressive Enhancements : END -->
 
@@ -272,8 +278,8 @@
                 <!-- 1 Column Centered : BEGIN -->
                 <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
                     <tr>
-                        <td align="center">
-                            <a id="more-info" href="www.example.com" style="display: block; padding: 20px; background-color: #ffffff;">I still don't really understand</a>
+                        <td align="center" style="background-color: #ffffff;">
+                            <a id="more-info" href="www.example.com" style="display: block; padding: 10px; margin: 10px;">I still don't really understand</a>
                         </td>
                     </tr>
                 </table>
